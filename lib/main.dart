@@ -1,24 +1,23 @@
-import 'package:flutter/cupertino.dart';
+import './widgets/bmi_widgets.dart';
 import 'package:flutter/material.dart';
-
-import './bmi_calculator.dart';
 
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyApp(),
+      title: 'BMi Calculator',
+      home: const MyApp(),
       theme: ThemeData(
-        textTheme: TextTheme().copyWith(
-          bodyText2: TextStyle(color: Colors.white),
+        textTheme: const TextTheme().copyWith(
+          bodyText2: const TextStyle(color: Colors.white),
+          bodyText1: const TextStyle(color: Colors.black),
         ),
-        appBarTheme: AppBarTheme(
-          backgroundColor: Color(0xFF101639),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF12153B),
+          centerTitle: true,
         ),
-        iconTheme: IconThemeData(
-          color: Colors.white,
-        ),
-        backgroundColor: Color(0xFF141A3B),
+        iconTheme: const IconThemeData(color: Colors.white),
+        backgroundColor: const Color(0xFF282C4F),
       ),
     ),
   );
@@ -30,12 +29,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("BMI Calculator"),
-        centerTitle: true,
-      ),
-      backgroundColor: Color(0xFF0C1233),
-      body: BmiCalculator(),
-    );
+        appBar: AppBar(
+          title: const Text('BMI Calculator'),
+        ),
+        backgroundColor: Color(0xFF101336),
+        body: BmiCalculator());
   }
 }
